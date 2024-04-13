@@ -33,6 +33,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Quizzes from "../Quizzes";
+import QuizDetailsScreen from "../Quizzes/Details";
+import QuizDetailsEditor from "../Quizzes/Editor/DetailsEditor";
+import QuizEditor from "../Quizzes/Editor";
+import QuizQuestionsDetailEditor from "../Quizzes/Editor/QuestionsEditor";
+
 const API_BASE = process.env.REACT_APP_API_BASE;
 function Courses() {
         const { courseId } = useParams();
@@ -394,6 +399,10 @@ function Courses() {
                             <Route path="Assignments" element={<Assignments/>} />
                             <Route path="Assignments/:assignmentId" element={<AssignmentEditor/>}/>
                             <Route path="Quizzes" element={<Quizzes/>} />
+                            <Route path="Quizzes/:assignmentId" element={<QuizDetailsScreen/>}/>
+                            <Route path="Quizzes/:assignmentId/Editor" element={<QuizEditor/>}/>
+                            <Route path="Quizzes/:assignmentId/Editor/DetailsEditor" element={<QuizDetailsEditor/>}/>
+                            <Route path="Quizzes/:assignmentId/Editor/QuestionsEditor" element={<QuizQuestionsDetailEditor/>}/>
                             <Route path="Grades" element={<Grades />} />
                             <Route path="People" element={<h1>People</h1>} />
                             <Route path="Panopto Video" element={<h1>Panopto Video</h1>} />

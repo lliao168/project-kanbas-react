@@ -191,7 +191,7 @@ function Quizzes () {
         return (
             <ul className="list-group" style={{top: `${contextMenu.y}px`, left: `${contextMenu.x}px`, position:"fixed", zIndex:"1000", border:"1px solid #ccc", width:"60px", borderRadius: "5px"}}>
                 <li className="list-group-item" style={{borderBottom: "1px solid #ccc", backgroundColor:"#f0f0f0"}}>
-                    <button type="button">
+                    <button type="button"onClick={() => navigate(`/Kanbas/Courses/${courseId}/Quizzes/${contextMenu.selectedAssignment}`)}>
                         Edit
                     </button>
                 </li>
